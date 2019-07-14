@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Hello = () => {
+const Hello = (props) => {
     // using JSX
-    // return (
-    //     <div>
-    //         <h1>Hello Munnu</h1>
-    //     </div>
-    // )
+    return (
+        <div>
+            <h1>Hello {props.name} a.k.a {props.heroName}</h1>
+            {props.children}
+        </div>
+    )
 
     // using React.createElement(<html-tag-to-be-rendered>, <optional-props>, <children of the html element>)
     
@@ -39,11 +40,11 @@ const Hello = () => {
     //     React.createElement('h1', null, 'Hello Minaam')
     // )
 
-    return React.createElement(
-        'div',
-        {id: 'hello', className: 'dummyClass'}, // ok
-        React.createElement('h1', null, 'Hello Minaam')
-    )
+    // return React.createElement(
+    //     'div',
+    //     {id: 'hello', className: 'dummyClass'}, // ok
+    //     React.createElement('h1', null, 'Hello Minaam')
+    // )
 }
 
 export default Hello;

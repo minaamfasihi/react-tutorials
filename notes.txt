@@ -37,3 +37,26 @@ JSX:
 
 - Each JSX call translates into a call to React.createElement.
 
+JSX differences:
+class -> className
+for -> htmlFor
+camelCase prop naming convention: onclick -> onClick, tabindex -> tabIndex
+
+- className will change to class in React 18 probably.
+- props is immutable
+
+props vs. state:
+props: 
+- props get passed to component
+- received as function parameters
+- props are immutable
+- props - Functional Components
+this.props - Class Components
+
+state:
+- state is managed within the component
+- variables declared in the function body
+- state can be changed
+- useState Hook - Functional Components
+this.state - Class Components
+

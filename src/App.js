@@ -18,7 +18,16 @@ function App() {
     <div className="App">
       {/* <Greet />
       <Welcome /> */}
-      <Hello />
+      <Hello name="Clark" heroName="Batman">
+        <p>This is children props</p>
+      </Hello>
+      <Hello name="Bruce" heroName="Superman">
+        <button>Action</button>
+      </Hello>
+      <Hello name="Diana" heroName="Wonder Woman" />
+      <Welcome name="Jagga" heroName="Jagga Father" />
+      <Welcome name="Nobody" heroName="Nobody father" />
+      <Welcome name="Somebody" heroName="Somebody mother" />
     </div>
   );
 }

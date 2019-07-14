@@ -1,0 +1,39 @@
+Stateless functional component: JS functions, simply return html (read jsx), optionally take in props as param.
+Stateful class component: ES6 class extending Component class, must contain render method that returns html.
+
+Fb has over 30k components!
+
+Stateless functional component: Properties (props) -> JS Function -> HTML (JSX)
+- If there is no content between tags, then you can self-close the tag.
+- Class component can also receive props, has an internal state and returns an HTML (JSX)
+- For a class component, React along with Component must be imported.
+
+Functional Component:
+- Simple functions
+- Use function components as much as possible
+- Absence of 'this' keyword
+- Forced to think of a solution without using state
+- Mainly responsible for the UI
+- Stateless/Dumb/Presentational components
+
+Class Component:
+- More feature rich
+- Maintain their own private data - state
+- Complex UI logic
+- Provide lifecycle hooks
+- Stateful/Smart/Container components
+
+In react conf 2018, in react 16.7.0-alpha, they've announced hooks.
+Hooks let you use state and other class features without writing a class.
+No breaking changes!
+
+JSX:
+- Extension to JS language syntax.
+- Write XML-like code for elements and components
+- JSX tags have a tag name, attributes and children
+- JSX is not a necessity to write React apps
+- JSX makes your code concise, simpler and elegant
+- JSX ultimately transpiles to pure JS which is understood by browsers.
+
+- Each JSX call translates into a call to React.createElement.
+

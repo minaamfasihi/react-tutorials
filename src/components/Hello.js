@@ -1,11 +1,14 @@
 import React from 'react';
 
-const Hello = (props) => {
+// const Hello = ({name, heroName}) => { // one way of destructuring props
+const Hello = props => {
     // using JSX
+    const { name, heroName } = props; // another way
     return (
         <div>
-            <h1>Hello {props.name} a.k.a {props.heroName}</h1>
-            {props.children}
+            {/* <h1>Hello {props.name} a.k.a {props.heroName}</h1> */}
+            <h1>Hello {name} a.k.a {heroName}</h1>
+            {/* {props.children} */}
         </div>
     )
 

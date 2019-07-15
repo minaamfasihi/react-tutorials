@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Welcome from './components/Welcome';
 import Hello from './components/Hello';
+import Message from './components/Message';
+import Counter from './components/Counter';
 
 // since Greet is exported as default, it can be imported with any name.
 // like: import MyComponent from './components/Greet';
@@ -28,6 +30,8 @@ function App() {
       <Welcome name="Jagga" heroName="Jagga Father" />
       <Welcome name="Nobody" heroName="Nobody father" />
       <Welcome name="Somebody" heroName="Somebody mother" />
+      <Message />
+      <Counter />
     </div>
   );
 }

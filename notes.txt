@@ -60,3 +60,21 @@ state:
 - useState Hook - Functional Components
 this.state - Class Components
 
+- If you change this.state.count, then it wont re-render the DOM. You have to use this.setState();
+- Calls to this.setState() are async. Meaning that if you try to reuse that value elsewhere, it wont be the same. Async:
+this.setState({
+	count: this.state.count + 1
+});
+console.log(this.state.count); // Inconsistent output
+
+Sync (print message after state is updated through callback):
+this.setState({
+	count: this.state.count + 1
+}, () => {
+	console.log(this.state.count); // expected output
+});
+
+- multiple calls to setState where we have to update the state based on the previous state, simply pass a function to setState with the prevState as parameter. Otherwise, the calls will be grouped into one update call and inaccurate results will show.
+
+- props are destructured differently in class component and functional component.
+

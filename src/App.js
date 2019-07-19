@@ -5,7 +5,10 @@ import Welcome from './components/Welcome';
 import Hello from './components/Hello';
 import Message from './components/Message';
 import Counter from './components/Counter';
-
+import FunctionClick from './components/FunctionClick';
+import ClassClick from './components/ClassClick';
+import EventBind from './components/EventBind';
+import ParentComponent from './components/ChildComponent';
 // since Greet is exported as default, it can be imported with any name.
 // like: import MyComponent from './components/Greet';
 // However, if it was exported as named export like:
@@ -20,7 +23,7 @@ function App() {
     <div className="App">
       {/* <Greet />
       <Welcome /> */}
-      <Hello name="Clark" heroName="Batman">
+      {/* <Hello name="Clark" heroName="Batman">
         <p>This is children props</p>
       </Hello>
       <Hello name="Bruce" heroName="Superman">
@@ -31,7 +34,11 @@ function App() {
       <Welcome name="Nobody" heroName="Nobody father" />
       <Welcome name="Somebody" heroName="Somebody mother" />
       <Message />
-      <Counter />
+      <Counter /> */}
+      {/* <EventBind />
+      <FunctionClick />
+      <ClassClick /> */}
+      <ParentComponent />
     </div>
   );
 }

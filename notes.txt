@@ -78,3 +78,43 @@ this.setState({
 
 - props are destructured differently in class component and functional component.
 
+- Inside a functional component, if we do: 
+function clickHandler() {
+	console.log('Button clicked');
+}
+
+<button onClick={clickHandler}>Click!</button> 
+
+Notice that we are passing the clickHandler handler instead of calling the function like clickHandler() because if we do that, then it will call the function without us having clicked it and will never call it when we click on button.
+
+- this keyword is null in a class, unless you bind it.
+1st approach: 
+this.clickHandler.bind(this) 
+is one way of binding it. Problem with this is that every setState will re-render the component, and render method will be called and so there will be a new event handler every time.
+
+2nd approach: 
+<button onClick={() => this.clickHandler()}>Btn</button>
+is another way. Here we are calling the function. But same problem as above.
+
+3rd approach (used by Fb as well):
+Use 1st approach but in constructor.
+class A extends Component {
+	constructor() {
+		...
+		...
+		this.clickHandler = this.clickHandler.bind(this)
+	}
+}
+
+4th approach:
+Define the method as an arrow function like so:
+class X extends Component {
+	constructor() {
+		...
+	}
+
+	clickHandler = () => {
+
+	}
+}
+

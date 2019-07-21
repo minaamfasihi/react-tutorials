@@ -25,12 +25,16 @@ import './components/appStyles.css';
 import styles from './components/appStyles.module.css';
 import Form from './components/Form';
 import LifecycleA from './components/LifecycleA';
+import FragmentDemo from './components/FragmentDemo';
+import Table from './components/Table';
 
 function App() {
   return (
     <div className="App">
       {/* <Form /> */}
-      <LifecycleA />
+      {/* <LifecycleA /> */}
+      {/* <FragmentDemo /> */}
+      <Table />
       {/* <Stylesheet primary={true} /> */}
       {/* <Inline className='error' /> */}
       {/* <h1 className='error'>Error</h1>

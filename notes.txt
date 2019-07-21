@@ -204,4 +204,24 @@ Must call super(props) which calls constructor of Component to have access to pr
 Only place where you can directly overwrite state. this.state(...)
 2. static getDerivedStateFromProps(props, state) - when the state of component depends on changes in props over time.
 If the initial state of the component depends on props, then you use this method to set the state. it's a static method.
-doesnt have access to this keyword. You return the new object representing the new state.
+doesnt have access to 'this' keyword. You return the new object representing the new state.
+Dont cause side-effects.
+
+3. render() - only required method. read props & state and return JSX. it's a pure function. for a given props and state, it
+should always render the same UI. dont change state or interact with DOM or make ajax calls. Children components lifecycle 
+methods are also executed.
+
+4. componentDidMount() - Only called once in the lifetime of component. Invoked immediately after a component and all its 
+children components have been rendered to the DOM. Can cause side-effects. Ex. interact with DOM or perform any ajax calls
+to load data.
+
+Order of execution: (LifecycleB is a child of LifecycleA)
+
+Lifecycle A constructor called
+Lifecycle A getDerivedStateFromProps called
+LifecycleA render called
+Lifecycle B constructor called
+Lifecycle B getDerivedStateFromProps called
+LifecycleB render called
+LifecycleB componentDidMount called
+LifecycleA componentDidMount called

@@ -24,11 +24,13 @@ import Inline from './components/Inline';
 import './components/appStyles.css';
 import styles from './components/appStyles.module.css';
 import Form from './components/Form';
+import LifecycleA from './components/LifecycleA';
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      {/* <Form /> */}
+      <LifecycleA />
       {/* <Stylesheet primary={true} /> */}
       {/* <Inline className='error' /> */}
       {/* <h1 className='error'>Error</h1>

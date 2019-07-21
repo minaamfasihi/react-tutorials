@@ -27,6 +27,7 @@ import Form from './components/Form';
 import LifecycleA from './components/LifecycleA';
 import FragmentDemo from './components/FragmentDemo';
 import Table from './components/Table';
+import ParentOfRegComponent from './components/ParentOfRegComponent';
 
 function App() {
   return (
@@ -34,7 +35,8 @@ function App() {
       {/* <Form /> */}
       {/* <LifecycleA /> */}
       {/* <FragmentDemo /> */}
-      <Table />
+      {/* <Table /> */}
+      <ParentOfRegComponent />
       {/* <Stylesheet primary={true} /> */}
       {/* <Inline className='error' /> */}
       {/* <h1 className='error'>Error</h1>

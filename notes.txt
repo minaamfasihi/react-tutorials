@@ -307,4 +307,9 @@ Memo:
 memo are to functional comps what PC's are to class components.
 React.memo(functionalComponent) takes in a functional component, adds some stuff to it and returns an HOC (higher order comp)
 
+Refs:
+used to get a handle on an element. cannot be used with functional components. can only be used for elements or class 
+components.
+
+Ref forwarding:
 

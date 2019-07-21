@@ -118,3 +118,90 @@ class X extends Component {
 	}
 }
 
+Conditional rendering:
+1) if else
+2) Ternary operator
+4) Short circuit operator: 
+render() {
+	this.state.isLoggedIn && <div>Welcome</div>
+}
+
+lists:
+
+
+- You cant access key passed from prop inside the child element.
+
+The below two lists only differ in the last element. React iterates over both lists and computes the difference, and sees that only the last element is different. React then mutates the DOM accordingly.
+<ul>
+	<li>Bruce</li>
+	<li>Clarke</li>
+</ul>
+
+<ul>
+	<li>Bruce</li>
+	<li>Clarke</li>
+	<li>Diana</li>
+</ul>
+
+Now, if we have:
+<ul>
+	<li>Bruce</li>
+	<li>Clarke</li>
+</ul>
+
+<ul>
+	<li>Diana</li>
+	<li>Bruce</li>
+	<li>Clarke</li>
+</ul>
+
+React will now compare the two lists, and finds that the two lists differ, so it renders the updated list completely without realising that two elements are indeed the same.
+Hence we use keys as props in lists.
+
+Index as key anti-pattern:
+<ul>
+	<li key="0">1</li>
+	<li key="1">2</li>
+	<li key="2">3</li>
+</ul>
+
+If you insert a new element at the top, it will have key="0" but React will think its value is 1 like before instead of blank.
+Only use index as key if:
+1. there is no unique id in a list
+2. list is a static list and will not change
+3. list will never be reordered or filtered
+
+Styling React components:
+1. CSS stylesheets
+2. Inline Styling
+3. CSS Modules
+4. CSS in JS libraries (name of library: styled components)
+
+- module approach of styling doesnt cause conflicts, whereas stylesheets apply to parent as well as child components.
+
+Controlled components:
+- such elements whose value is controlled by react is a controlle component.
+
+Lifecycle methods:
+- they dont exist on a functional component
+- we can override them on class components
+
+Mounting: When an instance of a component is being created and inserted into DOM
+Updating: When a component is being re-rendered as a result of changes to either its props or state
+Unmounting: When a component is being removed from DOM
+Error handling: When there is an error during rendering, in a lifecycle method or in the constructor of any child component.
+
+Mounting: constructor, static getDerivedStateFromProps, render and componentDidMount
+Updating: static getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate, and componentDidUpdate
+Unmounting: componentWillUnmount
+Error Handling: static getDerivedStateFromError, and componentDidCatch
+
+Mounting lifecycle methods:
+In the order they're invoked:
+1. constructor(props) - a special function that gets called whenever a new component is created.
+It's used for initializing state and binding event handlers. Do not cause side-effects. Ex. HTTP requests.
+Must call super(props) which calls constructor of Component to have access to props. 
+Only place where you can directly overwrite state. this.state(...)
+2. static getDerivedStateFromProps(props, state) - when the state of component depends on changes in props over time.
+If the initial state of the component depends on props, then you use this method to set the state. it's a static method.
+doesnt have access to this keyword. You return the new object representing the new state.

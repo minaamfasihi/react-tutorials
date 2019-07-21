@@ -9,6 +9,9 @@ import FunctionClick from './components/FunctionClick';
 import ClassClick from './components/ClassClick';
 import EventBind from './components/EventBind';
 import ParentComponent from './components/ChildComponent';
+import UserGreeting from './components/UserGreeting';
+import NameList from './components/NameList';
+import Stylesheet from './components/Stylesheet';
 // since Greet is exported as default, it can be imported with any name.
 // like: import MyComponent from './components/Greet';
 // However, if it was exported as named export like:
@@ -17,10 +20,19 @@ import ParentComponent from './components/ChildComponent';
 // import { Greet } from './components/Greet'
 
 import Greet from './components/Greet';
+import Inline from './components/Inline';
+import './components/appStyles.css';
+import styles from './components/appStyles.module.css';
+import Form from './components/Form';
 
 function App() {
   return (
     <div className="App">
+      <Form />
+      {/* <Stylesheet primary={true} /> */}
+      {/* <Inline className='error' /> */}
+      {/* <h1 className='error'>Error</h1>
+      <h1 className={styles.success}>Success</h1> */}
       {/* <Greet />
       <Welcome /> */}
       {/* <Hello name="Clark" heroName="Batman">
@@ -38,7 +50,9 @@ function App() {
       {/* <EventBind />
       <FunctionClick />
       <ClassClick /> */}
-      <ParentComponent />
+      {/* <ParentComponent /> */}
+      {/* <UserGreeting /> */}
+      {/* <NameList /> */}
     </div>
   );
 }

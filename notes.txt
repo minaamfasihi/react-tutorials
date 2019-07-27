@@ -339,5 +339,16 @@ const IronMan = withSuit(Tony Stark)
 
 When passing props from parent to children which are returned from HOC, the props will be passed to the HOC rather than the
 child. Solution is to pass the props received in HOC to the child using {...this.props}
- 
 
+Render props pattern:
+Similar to HOC, used for sharing code.
+Technique for sharing code b/w React components using a prop whose value is a function.
+
+Context:
+Provides a way to pass data through the component tree without having to pass props down manually at every level.
+1. create context value
+2. provide context value
+3. consume context value
+
+2 limitations of contextType over Consumer pattern. One is that you can only subscribe to one context. second is, it only works
+with class components.

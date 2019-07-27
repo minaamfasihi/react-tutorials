@@ -35,11 +35,32 @@ import PortalsDemo from './components/PortalsDemo';
 import Hero from './components/Hero';
 import ErrorBoundary from './components/ErrorBoundary';
 import ClicksCounter from './components/ClicksCounter';
+import User from './components/User';
+import CounterPropsExample from './components/CounterPropsExample';
+import ClickCounter2 from './components/ClickCounter2';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/userContext';
+import PostList from './components/PostList';
+import PostForm from './components/PostForm';
 
 function App() {
   return (
     <div className="App">
-      <ClicksCounter name="Munnu" />
+      {/* <PostList /> */}
+      <PostForm />
+      {/* <ClicksCounter name="Munnu" /> */}
+      {/* <User name={(isLoggedIn) => isLoggedIn ? 'Munnu' : 'Guest'} /> */}
+      {/* <CounterPropsExample render={(count, incrementCount) => (
+        <ClickCounter2 count={count} incrementCount={incrementCount} />
+      )} /> */}
+      {/* <CounterPropsExample>
+        {(count, incrementCount) => (
+          <ClickCounter2 count={count} incrementCount={incrementCount} />
+        )}
+      </CounterPropsExample> */}
+      {/* <UserProvider value="Munnu">
+        <ComponentC />
+      </UserProvider> */}
       {/* <ErrorBoundary>
         <Hero heroName="Batman" />
       </ErrorBoundary>

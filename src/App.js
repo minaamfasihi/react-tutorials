@@ -31,11 +31,26 @@ import ParentOfRegComponent from './components/ParentOfRegComponent';
 import RefsDemo from './components/RefsDemo';
 import FocusInput from './components/FocusInput';
 import FRParentInput from './components/FRParentInput';
+import PortalsDemo from './components/PortalsDemo';
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
+import ClicksCounter from './components/ClicksCounter';
 
 function App() {
   return (
     <div className="App">
-      <FRParentInput />
+      <ClicksCounter name="Munnu" />
+      {/* <ErrorBoundary>
+        <Hero heroName="Batman" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero heroName="Superman" />
+      </ErrorBoundary>
+      <ErrorBoundary>  
+        <Hero heroName="Joker" />
+      </ErrorBoundary> */}
+      {/* <FRParentInput /> */}
+      {/* <PortalsDemo /> */}
       {/* <Form /> */}
       {/* <LifecycleA /> */}
       {/* <FragmentDemo /> */}
